@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C Programming Quiz</title>
+  <link rel="stylesheet" href="./programming.css" />
+</head>
+<body>
+  <!-- Start Screen -->
+  <div class="quiz-box" id="start-screen">
+    <h1>C Programming Quiz 🧠</h1>
+    <input type="text" id="player-name" placeholder="Enter your name" />
+    <br/><br/>
+    <button onclick="initQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="quiz-box" id="question-screen" style="display: none;">
+    <h2 id="question-text"></h2>
+    <img id="question-img" alt="" style="display: none;" />
+    <div class="option-container" id="option-buttons"></div>
+    <p id="countdown"></p>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="quiz-box" id="end-screen" style="display: none;">
+    <h2>Quiz Completed 🎉</h2>
+    <p id="score-display"></p>
+    <h3>🏆 Top Scores</h3>
+    <ul id="scoreboard"></ul>
+    <button onclick="location.reload()">Try Again</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="sound-correct" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+  <audio id="sound-wrong" src="https://www.soundjay.com/buttons/sounds/button-14.mp3"></audio>
+
+  <script src="./programming.js"></script>
+</body>
+</html>
